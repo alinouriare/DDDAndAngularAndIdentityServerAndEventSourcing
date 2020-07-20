@@ -1,0 +1,41 @@
+﻿using Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System;
+using System.Collections.Generic;
+
+namespace ClassifiedAds.Persistence.MappingConfigurations
+{
+    public class UserConfiguration: IEntityTypeConfiguration<User>
+    {
+        public void Configure(EntityTypeBuilder<User> builder)
+        {
+            builder.ToTable("Users");
+            builder.Property(x => x.id).HasDefaultValueSql("newsequentialid()");
+
+            builder.HasMany(x => x.Claims)
+                .WithOne(x => x.User)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasMany(x => x.UserRoles)
+                .WithOne(x => x.User)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // Seed
+            builder.HasData(new List<User>
+            {
+                new User
+                {
+                    id = Guid.Parse("12837D3D-793F-EA11-BECB-5CEA1D05F660"),
+                    UserName = "alinouriare@gmail.com",
+                    NormalizedUserName = "ALINOURIARE@GMAIL.COM",
+                    Email = "alinouriare@gmail.com",
+                    NormalizedEmail = "alinouriare@GMAIL.COM",
+                    PasswordHash = "AQAAAAEAACcQAAAAELBcKuXWkiRQEYAkD/qKs9neac5hxWs3bkegIHpGLtf+zFHuKnuI3lBqkWO9TMmFAQ==", // v*7Un8b4rcN@<-RN
+                    SecurityStamp = "5M2QLL65J6H6VFIS7VZETKXY27KNVVYJ",
+                    LockoutEnabled = true,
+                },
+            });
+        }
+    }
+}

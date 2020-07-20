@@ -1,0 +1,583 @@
+2020-07-17 21:05:19.600 +04:30 [INF] [IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler] AuthenticationScheme: Bearer was challenged.
+2020-07-19 20:08:56.621 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-19 20:11:16.785 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-19 22:09:54.975 +04:30 [INF] [IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler] AuthenticationScheme: Bearer was challenged.
+2020-07-19 22:20:53.107 +04:30 [INF] [IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler] AuthenticationScheme: Bearer was challenged.
+2020-07-19 22:21:49.028 +04:30 [INF] [IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler] AuthenticationScheme: Bearer was challenged.
+2020-07-19 22:40:07.205 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-19 23:00:12.736 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-19 23:02:35.568 +04:30 [INF] [IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler] AuthenticationScheme: Bearer was challenged.
+2020-07-19 23:04:40.885 +04:30 [INF] [IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler] AuthenticationScheme: Bearer was challenged.
+2020-07-20 12:53:53.132 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-20 12:54:16.157 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-20 12:54:37.297 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-20 12:54:47.561 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-20 12:54:50.084 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-20 12:58:45.570 +04:30 [ERR] [Infrastructure.Interceptors.ErrorCatchingInterceptor] An unhandled exception has occurred while executing the method: ICrudService`1.AddOrUpdate with ([{"Code":"new","Name":"new","Description":"new","id":"aabf2f06-63ca-ea11-a0f4-fd9ef7b8b9ed","RowVersion":"AAAAAAAAJxE="}]). 
+System.InvalidOperationException: Cannot resolve scoped service 'Application.Common.Services.ICrudService`1[Domain.Entities.AuditLogEntry]' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Application.Products.EventHandlers.ProductCreatedEventHandler.Handle(EntityCreatedEvent`1 domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\EventHandlers\ProductCreatedEventHandler.cs:line 25
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid2[T0,T1](CallSite site, T0 arg0, T1 arg1)
+   at Domain.Event.DomainEvents.Dispatch(IDomainEvent domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Domain\Event\DomainEvents.cs:line 46
+   at Application.Common.Services.CrudService`1.AddOrUpdate(T entity) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Services\CrudService.cs:line 33
+   at Castle.Proxies.Invocations.ICrudService`1_AddOrUpdate.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.ErrorCatchingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\ErrorCatchingInterceptor.cs:line 22
+2020-07-20 12:59:03.110 +04:30 [ERR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Cannot resolve scoped service 'Application.Common.Services.ICrudService`1[Domain.Entities.AuditLogEntry]' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Application.Products.EventHandlers.ProductCreatedEventHandler.Handle(EntityCreatedEvent`1 domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\EventHandlers\ProductCreatedEventHandler.cs:line 25
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid2[T0,T1](CallSite site, T0 arg0, T1 arg1)
+   at Domain.Event.DomainEvents.Dispatch(IDomainEvent domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Domain\Event\DomainEvents.cs:line 46
+   at Application.Common.Services.CrudService`1.AddOrUpdate(T entity) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Services\CrudService.cs:line 33
+   at Castle.Proxies.Invocations.ICrudService`1_AddOrUpdate.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.ErrorCatchingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\ErrorCatchingInterceptor.cs:line 22
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.LoggingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\LoggingInterceptor.cs:line 28
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.ICrudService`1Proxy.AddOrUpdate(Product entity)
+   at Application.Products.Commands.AddUpdateProductCommandHandler.Handle(AddUpdateProductCommand command) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\Commands\AddUpdateProductCommand.cs:line 26
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid2[T0,T1](CallSite site, T0 arg0, T1 arg1)
+   at Application.Common.Dispatcher.Dispatch(ICommand command) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Dispatcher.cs:line 26
+   at WebAPI.Controllers.ProductsController.Post(ProductModel model) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\WebAPI\Controllers\ProductsController.cs:line 64
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ExceptionContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResourceFilter()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at StackExchange.Profiling.MiniProfilerMiddleware.Invoke(HttpContext context) in C:\projects\dotnet\src\MiniProfiler.AspNetCore\MiniProfilerMiddleware.cs:line 107
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Infrastructure.Web.Middleware.SecurityHeadersMiddleware.Invoke(HttpContext context) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Web\Middleware\SecurityHeadersMiddleware.cs:line 28
+   at App.Metrics.AspNetCore.Tracking.Middleware.ApdexMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.PerRequestTimerMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.RequestTimerMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.ErrorRequestMeterMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.ActiveRequestCounterEndpointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-07-20 12:59:08.230 +04:30 [ERR] [Infrastructure.Interceptors.ErrorCatchingInterceptor] An unhandled exception has occurred while executing the method: ICrudService`1.AddOrUpdate with ([{"Code":"new","Name":"new","Description":"new","id":"7f6dd213-63ca-ea11-a0f4-fd9ef7b8b9ed","RowVersion":"AAAAAAAAJxI="}]). 
+System.InvalidOperationException: Cannot resolve scoped service 'Application.Common.Services.ICrudService`1[Domain.Entities.AuditLogEntry]' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Application.Products.EventHandlers.ProductCreatedEventHandler.Handle(EntityCreatedEvent`1 domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\EventHandlers\ProductCreatedEventHandler.cs:line 25
+   at Domain.Event.DomainEvents.Dispatch(IDomainEvent domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Domain\Event\DomainEvents.cs:line 46
+   at Application.Common.Services.CrudService`1.AddOrUpdate(T entity) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Services\CrudService.cs:line 33
+   at Castle.Proxies.Invocations.ICrudService`1_AddOrUpdate.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.ErrorCatchingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\ErrorCatchingInterceptor.cs:line 22
+2020-07-20 13:15:07.931 +04:30 [ERR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Cannot resolve scoped service 'Application.Common.Services.ICrudService`1[Domain.Entities.AuditLogEntry]' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Application.Products.EventHandlers.ProductCreatedEventHandler.Handle(EntityCreatedEvent`1 domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\EventHandlers\ProductCreatedEventHandler.cs:line 25
+   at Domain.Event.DomainEvents.Dispatch(IDomainEvent domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Domain\Event\DomainEvents.cs:line 46
+   at Application.Common.Services.CrudService`1.AddOrUpdate(T entity) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Services\CrudService.cs:line 33
+   at Castle.Proxies.Invocations.ICrudService`1_AddOrUpdate.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.ErrorCatchingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\ErrorCatchingInterceptor.cs:line 22
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.LoggingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\LoggingInterceptor.cs:line 28
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.ICrudService`1Proxy.AddOrUpdate(Product entity)
+   at Application.Products.Commands.AddUpdateProductCommandHandler.Handle(AddUpdateProductCommand command) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\Commands\AddUpdateProductCommand.cs:line 26
+   at Application.Common.Dispatcher.Dispatch(ICommand command) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Dispatcher.cs:line 26
+   at WebAPI.Controllers.ProductsController.Post(ProductModel model) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\WebAPI\Controllers\ProductsController.cs:line 64
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ExceptionContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResourceFilter()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at StackExchange.Profiling.MiniProfilerMiddleware.Invoke(HttpContext context) in C:\projects\dotnet\src\MiniProfiler.AspNetCore\MiniProfilerMiddleware.cs:line 107
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Infrastructure.Web.Middleware.SecurityHeadersMiddleware.Invoke(HttpContext context) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Web\Middleware\SecurityHeadersMiddleware.cs:line 28
+   at App.Metrics.AspNetCore.Tracking.Middleware.ApdexMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.PerRequestTimerMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.RequestTimerMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.ErrorRequestMeterMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.ActiveRequestCounterEndpointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-07-20 13:15:08.004 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-20 13:15:53.561 +04:30 [ERR] [Infrastructure.Interceptors.ErrorCatchingInterceptor] An unhandled exception has occurred while executing the method: ICrudService`1.AddOrUpdate with ([{"Code":"new","Name":"new","Description":"new","id":"27dee46a-65ca-ea11-a0f4-fd9ef7b8b9ed","RowVersion":"AAAAAAAAJxQ="}]). 
+System.InvalidOperationException: Cannot resolve scoped service 'Application.Common.Services.ICrudService`1[Domain.Entities.AuditLogEntry]' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Application.Products.EventHandlers.ProductCreatedEventHandler.Handle(EntityCreatedEvent`1 domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\EventHandlers\ProductCreatedEventHandler.cs:line 25
+   at Domain.Event.DomainEvents.Dispatch(IDomainEvent domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Domain\Event\DomainEvents.cs:line 46
+   at Application.Common.Services.CrudService`1.AddOrUpdate(T entity) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Services\CrudService.cs:line 33
+   at Castle.Proxies.Invocations.ICrudService`1_AddOrUpdate.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.ErrorCatchingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\ErrorCatchingInterceptor.cs:line 22
+2020-07-20 13:15:53.660 +04:30 [ERR] [Infrastructure.Interceptors.ErrorCatchingInterceptor] An unhandled exception has occurred while executing the method: ICrudService`1.AddOrUpdate with ([{"Code":"new","Name":"new","Description":"new","id":"28dee46a-65ca-ea11-a0f4-fd9ef7b8b9ed","RowVersion":"AAAAAAAAJxU="}]). 
+System.InvalidOperationException: Cannot resolve scoped service 'Application.Common.Services.ICrudService`1[Domain.Entities.AuditLogEntry]' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Application.Products.EventHandlers.ProductCreatedEventHandler.Handle(EntityCreatedEvent`1 domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\EventHandlers\ProductCreatedEventHandler.cs:line 25
+   at Domain.Event.DomainEvents.Dispatch(IDomainEvent domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Domain\Event\DomainEvents.cs:line 46
+   at Application.Common.Services.CrudService`1.AddOrUpdate(T entity) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Services\CrudService.cs:line 33
+   at Castle.Proxies.Invocations.ICrudService`1_AddOrUpdate.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.ErrorCatchingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\ErrorCatchingInterceptor.cs:line 22
+2020-07-20 13:15:55.522 +04:30 [ERR] [Infrastructure.Interceptors.ErrorCatchingInterceptor] An unhandled exception has occurred while executing the method: ICrudService`1.AddOrUpdate with ([{"Code":"new","Name":"new","Description":"new","id":"29dee46a-65ca-ea11-a0f4-fd9ef7b8b9ed","RowVersion":"AAAAAAAAJxY="}]). 
+System.InvalidOperationException: Cannot resolve scoped service 'Application.Common.Services.ICrudService`1[Domain.Entities.AuditLogEntry]' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Application.Products.EventHandlers.ProductCreatedEventHandler.Handle(EntityCreatedEvent`1 domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\EventHandlers\ProductCreatedEventHandler.cs:line 25
+   at Domain.Event.DomainEvents.Dispatch(IDomainEvent domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Domain\Event\DomainEvents.cs:line 46
+   at Application.Common.Services.CrudService`1.AddOrUpdate(T entity) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Services\CrudService.cs:line 33
+   at Castle.Proxies.Invocations.ICrudService`1_AddOrUpdate.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.ErrorCatchingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\ErrorCatchingInterceptor.cs:line 22
+2020-07-20 13:15:55.809 +04:30 [ERR] [Infrastructure.Interceptors.ErrorCatchingInterceptor] An unhandled exception has occurred while executing the method: ICrudService`1.AddOrUpdate with ([{"Code":"new","Name":"new","Description":"new","id":"26dee46a-65ca-ea11-a0f4-fd9ef7b8b9ed","RowVersion":"AAAAAAAAJxM="}]). 
+System.InvalidOperationException: Cannot resolve scoped service 'Application.Common.Services.ICrudService`1[Domain.Entities.AuditLogEntry]' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Application.Products.EventHandlers.ProductCreatedEventHandler.Handle(EntityCreatedEvent`1 domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\EventHandlers\ProductCreatedEventHandler.cs:line 25
+   at Domain.Event.DomainEvents.Dispatch(IDomainEvent domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Domain\Event\DomainEvents.cs:line 46
+   at Application.Common.Services.CrudService`1.AddOrUpdate(T entity) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Services\CrudService.cs:line 33
+   at Castle.Proxies.Invocations.ICrudService`1_AddOrUpdate.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.ErrorCatchingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\ErrorCatchingInterceptor.cs:line 22
+2020-07-20 13:16:05.875 +04:30 [ERR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Cannot resolve scoped service 'Application.Common.Services.ICrudService`1[Domain.Entities.AuditLogEntry]' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Application.Products.EventHandlers.ProductCreatedEventHandler.Handle(EntityCreatedEvent`1 domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\EventHandlers\ProductCreatedEventHandler.cs:line 25
+   at Domain.Event.DomainEvents.Dispatch(IDomainEvent domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Domain\Event\DomainEvents.cs:line 46
+   at Application.Common.Services.CrudService`1.AddOrUpdate(T entity) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Services\CrudService.cs:line 33
+   at Castle.Proxies.Invocations.ICrudService`1_AddOrUpdate.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.ErrorCatchingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\ErrorCatchingInterceptor.cs:line 22
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.LoggingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\LoggingInterceptor.cs:line 28
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.ICrudService`1Proxy.AddOrUpdate(Product entity)
+   at Application.Products.Commands.AddUpdateProductCommandHandler.Handle(AddUpdateProductCommand command) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\Commands\AddUpdateProductCommand.cs:line 26
+   at Application.Common.Dispatcher.Dispatch(ICommand command) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Dispatcher.cs:line 26
+   at WebAPI.Controllers.ProductsController.Post(ProductModel model) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\WebAPI\Controllers\ProductsController.cs:line 64
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ExceptionContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResourceFilter()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at StackExchange.Profiling.MiniProfilerMiddleware.Invoke(HttpContext context) in C:\projects\dotnet\src\MiniProfiler.AspNetCore\MiniProfilerMiddleware.cs:line 107
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Infrastructure.Web.Middleware.SecurityHeadersMiddleware.Invoke(HttpContext context) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Web\Middleware\SecurityHeadersMiddleware.cs:line 28
+   at App.Metrics.AspNetCore.Tracking.Middleware.ApdexMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.PerRequestTimerMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.RequestTimerMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.ErrorRequestMeterMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.ActiveRequestCounterEndpointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-07-20 13:16:05.916 +04:30 [ERR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Cannot resolve scoped service 'Application.Common.Services.ICrudService`1[Domain.Entities.AuditLogEntry]' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Application.Products.EventHandlers.ProductCreatedEventHandler.Handle(EntityCreatedEvent`1 domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\EventHandlers\ProductCreatedEventHandler.cs:line 25
+   at Domain.Event.DomainEvents.Dispatch(IDomainEvent domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Domain\Event\DomainEvents.cs:line 46
+   at Application.Common.Services.CrudService`1.AddOrUpdate(T entity) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Services\CrudService.cs:line 33
+   at Castle.Proxies.Invocations.ICrudService`1_AddOrUpdate.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.ErrorCatchingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\ErrorCatchingInterceptor.cs:line 22
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.LoggingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\LoggingInterceptor.cs:line 28
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.ICrudService`1Proxy.AddOrUpdate(Product entity)
+   at Application.Products.Commands.AddUpdateProductCommandHandler.Handle(AddUpdateProductCommand command) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\Commands\AddUpdateProductCommand.cs:line 26
+   at Application.Common.Dispatcher.Dispatch(ICommand command) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Dispatcher.cs:line 26
+   at WebAPI.Controllers.ProductsController.Post(ProductModel model) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\WebAPI\Controllers\ProductsController.cs:line 64
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ExceptionContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResourceFilter()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at StackExchange.Profiling.MiniProfilerMiddleware.Invoke(HttpContext context) in C:\projects\dotnet\src\MiniProfiler.AspNetCore\MiniProfilerMiddleware.cs:line 107
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Infrastructure.Web.Middleware.SecurityHeadersMiddleware.Invoke(HttpContext context) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Web\Middleware\SecurityHeadersMiddleware.cs:line 28
+   at App.Metrics.AspNetCore.Tracking.Middleware.ApdexMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.PerRequestTimerMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.RequestTimerMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.ErrorRequestMeterMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.ActiveRequestCounterEndpointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-07-20 13:16:06.084 +04:30 [ERR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Cannot resolve scoped service 'Application.Common.Services.ICrudService`1[Domain.Entities.AuditLogEntry]' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Application.Products.EventHandlers.ProductCreatedEventHandler.Handle(EntityCreatedEvent`1 domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\EventHandlers\ProductCreatedEventHandler.cs:line 25
+   at Domain.Event.DomainEvents.Dispatch(IDomainEvent domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Domain\Event\DomainEvents.cs:line 46
+   at Application.Common.Services.CrudService`1.AddOrUpdate(T entity) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Services\CrudService.cs:line 33
+   at Castle.Proxies.Invocations.ICrudService`1_AddOrUpdate.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.ErrorCatchingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\ErrorCatchingInterceptor.cs:line 22
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.LoggingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\LoggingInterceptor.cs:line 28
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.ICrudService`1Proxy.AddOrUpdate(Product entity)
+   at Application.Products.Commands.AddUpdateProductCommandHandler.Handle(AddUpdateProductCommand command) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\Commands\AddUpdateProductCommand.cs:line 26
+   at Application.Common.Dispatcher.Dispatch(ICommand command) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Dispatcher.cs:line 26
+   at WebAPI.Controllers.ProductsController.Post(ProductModel model) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\WebAPI\Controllers\ProductsController.cs:line 64
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ExceptionContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResourceFilter()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at StackExchange.Profiling.MiniProfilerMiddleware.Invoke(HttpContext context) in C:\projects\dotnet\src\MiniProfiler.AspNetCore\MiniProfilerMiddleware.cs:line 107
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Infrastructure.Web.Middleware.SecurityHeadersMiddleware.Invoke(HttpContext context) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Web\Middleware\SecurityHeadersMiddleware.cs:line 28
+   at App.Metrics.AspNetCore.Tracking.Middleware.ApdexMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.PerRequestTimerMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.RequestTimerMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.ErrorRequestMeterMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.ActiveRequestCounterEndpointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-07-20 13:16:06.116 +04:30 [ERR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Cannot resolve scoped service 'Application.Common.Services.ICrudService`1[Domain.Entities.AuditLogEntry]' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Application.Products.EventHandlers.ProductCreatedEventHandler.Handle(EntityCreatedEvent`1 domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\EventHandlers\ProductCreatedEventHandler.cs:line 25
+   at Domain.Event.DomainEvents.Dispatch(IDomainEvent domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Domain\Event\DomainEvents.cs:line 46
+   at Application.Common.Services.CrudService`1.AddOrUpdate(T entity) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Services\CrudService.cs:line 33
+   at Castle.Proxies.Invocations.ICrudService`1_AddOrUpdate.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.ErrorCatchingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\ErrorCatchingInterceptor.cs:line 22
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.LoggingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\LoggingInterceptor.cs:line 28
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.ICrudService`1Proxy.AddOrUpdate(Product entity)
+   at Application.Products.Commands.AddUpdateProductCommandHandler.Handle(AddUpdateProductCommand command) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\Commands\AddUpdateProductCommand.cs:line 26
+   at Application.Common.Dispatcher.Dispatch(ICommand command) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Dispatcher.cs:line 26
+   at WebAPI.Controllers.ProductsController.Post(ProductModel model) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\WebAPI\Controllers\ProductsController.cs:line 64
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ExceptionContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResourceFilter()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at StackExchange.Profiling.MiniProfilerMiddleware.Invoke(HttpContext context) in C:\projects\dotnet\src\MiniProfiler.AspNetCore\MiniProfilerMiddleware.cs:line 107
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Infrastructure.Web.Middleware.SecurityHeadersMiddleware.Invoke(HttpContext context) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Web\Middleware\SecurityHeadersMiddleware.cs:line 28
+   at App.Metrics.AspNetCore.Tracking.Middleware.ApdexMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.PerRequestTimerMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.RequestTimerMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.ErrorRequestMeterMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.ActiveRequestCounterEndpointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-07-20 13:16:14.851 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-20 13:16:18.909 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-20 13:16:21.444 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-20 13:16:25.526 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-20 13:16:28.389 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-20 13:16:54.943 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-20 14:09:45.101 +04:30 [INF] [IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2020-07-20 14:09:45.125 +04:30 [INF] [IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler] AuthenticationScheme: Bearer was challenged.
+2020-07-20 14:09:45.200 +04:30 [INF] [IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2020-07-20 14:09:45.203 +04:30 [INF] [IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler] AuthenticationScheme: Bearer was challenged.
+2020-07-20 14:21:08.462 +04:30 [INF] [IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2020-07-20 14:21:08.586 +04:30 [INF] [IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler] AuthenticationScheme: Bearer was challenged.
+2020-07-20 14:49:15.563 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-20 14:49:20.942 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-20 14:49:33.893 +04:30 [ERR] [Infrastructure.Interceptors.ErrorCatchingInterceptor] An unhandled exception has occurred while executing the method: ICrudService`1.AddOrUpdate with ([{"Code":"w","Name":"w","Description":"w","id":"3cd79c80-72ca-ea11-a0f4-fd9ef7b8b9ed","RowVersion":"AAAAAAAAJx4="}]). 
+System.InvalidOperationException: Cannot resolve scoped service 'Application.Common.Services.ICrudService`1[Domain.Entities.AuditLogEntry]' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Application.Products.EventHandlers.ProductCreatedEventHandler.Handle(EntityCreatedEvent`1 domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\EventHandlers\ProductCreatedEventHandler.cs:line 25
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid2[T0,T1](CallSite site, T0 arg0, T1 arg1)
+   at Domain.Event.DomainEvents.Dispatch(IDomainEvent domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Domain\Event\DomainEvents.cs:line 46
+   at Application.Common.Services.CrudService`1.AddOrUpdate(T entity) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Services\CrudService.cs:line 33
+   at Castle.Proxies.Invocations.ICrudService`1_AddOrUpdate.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.ErrorCatchingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\ErrorCatchingInterceptor.cs:line 22
+2020-07-20 14:53:46.841 +04:30 [INF] [IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2020-07-20 14:53:47.278 +04:30 [INF] [IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler] AuthenticationScheme: Bearer was challenged.
+2020-07-20 14:54:02.090 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-20 14:54:39.978 +04:30 [ERR] [Infrastructure.Interceptors.ErrorCatchingInterceptor] An unhandled exception has occurred while executing the method: ICrudService`1.AddOrUpdate with ([{"Code":"c","Name":"c","Description":"c","id":"28d75037-73ca-ea11-a0f4-fd9ef7b8b9ed","RowVersion":"AAAAAAAAJx8="}]). 
+System.InvalidOperationException: Cannot resolve scoped service 'Application.Common.Services.ICrudService`1[Domain.Entities.AuditLogEntry]' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.Microsoft.Extensions.DependencyInjection.ServiceLookup.IServiceProviderEngineCallback.OnResolve(Type serviceType, IServiceScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Application.Products.EventHandlers.ProductCreatedEventHandler.Handle(EntityCreatedEvent`1 domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\EventHandlers\ProductCreatedEventHandler.cs:line 25
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid2[T0,T1](CallSite site, T0 arg0, T1 arg1)
+   at Domain.Event.DomainEvents.Dispatch(IDomainEvent domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Domain\Event\DomainEvents.cs:line 46
+   at Application.Common.Services.CrudService`1.AddOrUpdate(T entity) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Services\CrudService.cs:line 33
+   at Castle.Proxies.Invocations.ICrudService`1_AddOrUpdate.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.ErrorCatchingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\ErrorCatchingInterceptor.cs:line 22
+2020-07-20 15:11:54.163 +04:30 [ERR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Cannot resolve scoped service 'Application.Common.Services.ICrudService`1[Domain.Entities.AuditLogEntry]' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.Microsoft.Extensions.DependencyInjection.ServiceLookup.IServiceProviderEngineCallback.OnResolve(Type serviceType, IServiceScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Application.Products.EventHandlers.ProductCreatedEventHandler.Handle(EntityCreatedEvent`1 domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\EventHandlers\ProductCreatedEventHandler.cs:line 25
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid2[T0,T1](CallSite site, T0 arg0, T1 arg1)
+   at Domain.Event.DomainEvents.Dispatch(IDomainEvent domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Domain\Event\DomainEvents.cs:line 46
+   at Application.Common.Services.CrudService`1.AddOrUpdate(T entity) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Services\CrudService.cs:line 33
+   at Castle.Proxies.Invocations.ICrudService`1_AddOrUpdate.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.ErrorCatchingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\ErrorCatchingInterceptor.cs:line 22
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.LoggingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\LoggingInterceptor.cs:line 28
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.ICrudService`1Proxy.AddOrUpdate(Product entity)
+   at Application.Products.Commands.AddUpdateProductCommandHandler.Handle(AddUpdateProductCommand command) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\Commands\AddUpdateProductCommand.cs:line 26
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid2[T0,T1](CallSite site, T0 arg0, T1 arg1)
+   at Application.Common.Dispatcher.Dispatch(ICommand command) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Dispatcher.cs:line 26
+   at WebAPI.Controllers.ProductsController.Post(ProductModel model) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\WebAPI\Controllers\ProductsController.cs:line 64
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ExceptionContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResourceFilter()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at StackExchange.Profiling.MiniProfilerMiddleware.Invoke(HttpContext context) in C:\projects\dotnet\src\MiniProfiler.AspNetCore\MiniProfilerMiddleware.cs:line 107
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Infrastructure.Web.Middleware.SecurityHeadersMiddleware.Invoke(HttpContext context) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Web\Middleware\SecurityHeadersMiddleware.cs:line 28
+   at App.Metrics.AspNetCore.Tracking.Middleware.ApdexMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.PerRequestTimerMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.RequestTimerMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.ErrorRequestMeterMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.ActiveRequestCounterEndpointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-07-20 15:12:12.720 +04:30 [ERR] [Infrastructure.Interceptors.ErrorCatchingInterceptor] An unhandled exception has occurred while executing the method: ICrudService`1.AddOrUpdate with ([{"Code":"sss","Name":"Seconde","Description":"c","id":"b1ddf0aa-75ca-ea11-a0f4-fd9ef7b8b9ed","RowVersion":"AAAAAAAAJyA="}]). 
+System.InvalidOperationException: Cannot resolve scoped service 'Application.Common.Services.ICrudService`1[Domain.Entities.AuditLogEntry]' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Application.Products.EventHandlers.ProductCreatedEventHandler.Handle(EntityCreatedEvent`1 domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\EventHandlers\ProductCreatedEventHandler.cs:line 25
+   at Domain.Event.DomainEvents.Dispatch(IDomainEvent domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Domain\Event\DomainEvents.cs:line 46
+   at Application.Common.Services.CrudService`1.AddOrUpdate(T entity) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Services\CrudService.cs:line 33
+   at Castle.Proxies.Invocations.ICrudService`1_AddOrUpdate.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.ErrorCatchingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\ErrorCatchingInterceptor.cs:line 22
+2020-07-20 15:15:25.976 +04:30 [ERR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Cannot resolve scoped service 'Application.Common.Services.ICrudService`1[Domain.Entities.AuditLogEntry]' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Application.Products.EventHandlers.ProductCreatedEventHandler.Handle(EntityCreatedEvent`1 domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\EventHandlers\ProductCreatedEventHandler.cs:line 25
+   at Domain.Event.DomainEvents.Dispatch(IDomainEvent domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Domain\Event\DomainEvents.cs:line 46
+   at Application.Common.Services.CrudService`1.AddOrUpdate(T entity) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Services\CrudService.cs:line 33
+   at Castle.Proxies.Invocations.ICrudService`1_AddOrUpdate.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.ErrorCatchingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\ErrorCatchingInterceptor.cs:line 22
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.LoggingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\LoggingInterceptor.cs:line 28
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.ICrudService`1Proxy.AddOrUpdate(Product entity)
+   at Application.Products.Commands.AddUpdateProductCommandHandler.Handle(AddUpdateProductCommand command) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\Commands\AddUpdateProductCommand.cs:line 26
+   at Application.Common.Dispatcher.Dispatch(ICommand command) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Dispatcher.cs:line 26
+   at WebAPI.Controllers.ProductsController.Post(ProductModel model) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\WebAPI\Controllers\ProductsController.cs:line 64
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ExceptionContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResourceFilter()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at StackExchange.Profiling.MiniProfilerMiddleware.Invoke(HttpContext context) in C:\projects\dotnet\src\MiniProfiler.AspNetCore\MiniProfilerMiddleware.cs:line 107
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Infrastructure.Web.Middleware.SecurityHeadersMiddleware.Invoke(HttpContext context) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Web\Middleware\SecurityHeadersMiddleware.cs:line 28
+   at App.Metrics.AspNetCore.Tracking.Middleware.ApdexMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.PerRequestTimerMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.RequestTimerMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.ErrorRequestMeterMiddleware.Invoke(HttpContext context)
+   at App.Metrics.AspNetCore.Tracking.Middleware.ActiveRequestCounterEndpointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-07-20 15:15:33.505 +04:30 [ERR] [Infrastructure.Interceptors.ErrorCatchingInterceptor] An unhandled exception has occurred while executing the method: ICrudService`1.AddOrUpdate with ([{"Code":"sss","Name":"Seconde","Description":"c","id":"04689d22-76ca-ea11-a0f4-fd9ef7b8b9ed","RowVersion":"AAAAAAAAJyE="}]). 
+System.InvalidOperationException: Cannot resolve scoped service 'Application.Common.Services.ICrudService`1[Domain.Entities.AuditLogEntry]' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Application.Products.EventHandlers.ProductCreatedEventHandler.Handle(EntityCreatedEvent`1 domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Products\EventHandlers\ProductCreatedEventHandler.cs:line 25
+   at Domain.Event.DomainEvents.Dispatch(IDomainEvent domainEvent) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Domain\Event\DomainEvents.cs:line 46
+   at Application.Common.Services.CrudService`1.AddOrUpdate(T entity) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\Common\Services\CrudService.cs:line 33
+   at Castle.Proxies.Invocations.ICrudService`1_AddOrUpdate.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Infrastructure.Interceptors.ErrorCatchingInterceptor.Intercept(IInvocation invocation) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Interceptors\ErrorCatchingInterceptor.cs:line 22
+2020-07-20 15:22:51.799 +04:30 [INF] [IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2020-07-20 15:22:51.993 +04:30 [INF] [IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler] AuthenticationScheme: Bearer was challenged.
+2020-07-20 15:23:20.989 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-20 15:23:29.606 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-20 15:23:31.303 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-20 15:23:34.224 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-20 15:23:37.025 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-20 15:27:21.665 +04:30 [INF] [IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', Current time: '[PII is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2020-07-20 15:27:21.908 +04:30 [INF] [IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler] AuthenticationScheme: Bearer was challenged.
+2020-07-20 15:27:34.538 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-20 15:27:42.773 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-20 15:27:52.054 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products
+2020-07-20 15:30:16.675 +04:30 [INF] [WebAPI.Controllers.ProductsController] Getting all products

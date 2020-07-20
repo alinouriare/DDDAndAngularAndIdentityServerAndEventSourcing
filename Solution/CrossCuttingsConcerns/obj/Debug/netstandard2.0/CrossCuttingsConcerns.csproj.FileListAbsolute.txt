@@ -1,0 +1,8 @@
+C:\Users\alino\OneDrive\Desktop\Temp\Solution\CrossCuttingsConcerns\bin\Debug\netstandard2.0\CrossCuttingsConcerns.deps.json
+C:\Users\alino\OneDrive\Desktop\Temp\Solution\CrossCuttingsConcerns\bin\Debug\netstandard2.0\CrossCuttingsConcerns.dll
+C:\Users\alino\OneDrive\Desktop\Temp\Solution\CrossCuttingsConcerns\bin\Debug\netstandard2.0\CrossCuttingsConcerns.pdb
+C:\Users\alino\OneDrive\Desktop\Temp\Solution\CrossCuttingsConcerns\obj\Debug\netstandard2.0\CrossCuttingsConcerns.AssemblyInfoInputs.cache
+C:\Users\alino\OneDrive\Desktop\Temp\Solution\CrossCuttingsConcerns\obj\Debug\netstandard2.0\CrossCuttingsConcerns.AssemblyInfo.cs
+C:\Users\alino\OneDrive\Desktop\Temp\Solution\CrossCuttingsConcerns\obj\Debug\netstandard2.0\CrossCuttingsConcerns.csproj.CoreCompileInputs.cache
+C:\Users\alino\OneDrive\Desktop\Temp\Solution\CrossCuttingsConcerns\obj\Debug\netstandard2.0\CrossCuttingsConcerns.dll
+C:\Users\alino\OneDrive\Desktop\Temp\Solution\CrossCuttingsConcerns\obj\Debug\netstandard2.0\CrossCuttingsConcerns.pdb

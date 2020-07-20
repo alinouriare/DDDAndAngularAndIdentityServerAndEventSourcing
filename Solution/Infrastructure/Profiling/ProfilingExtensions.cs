@@ -1,0 +1,56 @@
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using StackExchange.Profiling.Storage;
+using System;
+using System.Collections.Generic;
+using System.Security.Claims;
+using System.Text;
+
+namespace Infrastructure.Profiling
+{
+    public static class ProfilingExtensions
+    {
+        public static IServiceCollection AddClassifiedAdsProfiler(this IServiceCollection services, string connectionString = "")
+        {
+            services.AddMemoryCache()
+            .AddMiniProfiler(options =>
+            {
+                options.UserIdProvider = (request) =>
+                {
+                    var id = request.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value
+                            ?? request.HttpContext.User.FindFirst("sub")?.Value;
+                    return id;
+                };
+
+                options.RouteBasePath = "/profiler"; // access /profiler/results to see last profile check
+                options.PopupRenderPosition = StackExchange.Profiling.RenderPosition.BottomLeft;
+                options.PopupShowTimeWithChildren = true;
+                if (!string.IsNullOrEmpty(connectionString))
+                {
+                    var storage = new SqlServerStorage(connectionString);
+                    _ = storage.TableCreationScripts;
+
+                    options.Storage = storage;
+                }
+
+                options.ShouldProfile = (request) =>
+                {
+                    if (request.Path.StartsWithSegments("/healthcheck"))
+                    {
+                        return false;
+                    }
+
+                    return true;
+                };
+            })
+            .AddEntityFramework();
+            return services;
+        }
+
+        public static IApplicationBuilder UseClassifiedAdsProfiler(this IApplicationBuilder builder)
+        {
+            builder.UseMiniProfiler();
+            return builder;
+        }
+    }
+}

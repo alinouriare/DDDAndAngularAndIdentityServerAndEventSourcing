@@ -1,0 +1,31 @@
+2020-07-20 12:58:05.772 +04:30 [WRN] [Hangfire.AutomaticRetryAttribute] Failed to process the job '249': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:32.
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.IO.Pipelines.Pipe.GetReadAsyncResult()
+   at Microsoft.AspNetCore.SignalR.Client.HubConnection.HandshakeAsync(ConnectionState startingConnectionState, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Client.HubConnection.StartAsyncCore(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Client.HubConnection.StartAsyncCore(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Client.HubConnection.StartAsyncInner(CancellationToken cancellationToken)
+   at System.Threading.Tasks.ForceAsyncAwaiter.GetResult()
+   at Microsoft.AspNetCore.SignalR.Client.HubConnection.StartAsync(CancellationToken cancellationToken)
+   at Infrastructure.Notification.SignalRNotification.SendAsync[T](String endpoint, String eventName, T message) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Notification\SignalRNotification.cs:line 45
+   at Application.BackgroundTasks.SimulatedLongRunningJob.Run(String notificationServerEnpoint) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\BackgroundTasks\SimulatedLongRunningJob.cs:line 22
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2020-07-20 13:14:52.891 +04:30 [WRN] [Hangfire.Server.ServerHeartbeatProcess] Server mypc:13452:1d2a17b5 was considered dead by other servers, restarting...
+2020-07-20 13:14:59.699 +04:30 [WRN] [Hangfire.Server.BackgroundServerProcess] Server mypc:13452:1d2a17b5 stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+2020-07-20 15:15:26.124 +04:30 [WRN] [Hangfire.AutomaticRetryAttribute] Failed to process the job '529': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:27.
+System.TimeoutException: Server timeout (30000.00ms) elapsed without receiving a message from the server.
+   at Microsoft.AspNetCore.SignalR.Client.HubConnection.InvokeCoreAsyncCore(String methodName, Type returnType, Object[] args, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ForceAsyncAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.SignalR.Client.HubConnection.InvokeCoreAsync(String methodName, Type returnType, Object[] args, CancellationToken cancellationToken)
+   at Infrastructure.Notification.SignalRNotification.SendAsync[T](String endpoint, String eventName, T message) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Notification\SignalRNotification.cs:line 48
+   at Application.BackgroundTasks.SimulatedLongRunningJob.Run(String notificationServerEnpoint) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\BackgroundTasks\SimulatedLongRunningJob.cs:line 26
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+2020-07-20 15:30:08.722 +04:30 [WRN] [Hangfire.AutomaticRetryAttribute] Failed to process the job '544': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:30.
+System.TimeoutException: Server timeout (30000.00ms) elapsed without receiving a message from the server.
+   at Microsoft.AspNetCore.SignalR.Client.HubConnection.InvokeCoreAsyncCore(String methodName, Type returnType, Object[] args, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ForceAsyncAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.SignalR.Client.HubConnection.InvokeCoreAsync(String methodName, Type returnType, Object[] args, CancellationToken cancellationToken)
+   at Infrastructure.Notification.SignalRNotification.SendAsync[T](String endpoint, String eventName, T message) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Infrastructure\Notification\SignalRNotification.cs:line 48
+   at Application.BackgroundTasks.SimulatedLongRunningJob.Run(String notificationServerEnpoint) in C:\Users\alino\OneDrive\Desktop\Temp\Solution\Application\BackgroundTasks\SimulatedLongRunningJob.cs:line 26
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
